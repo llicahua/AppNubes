@@ -1,0 +1,56 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;0,800;1,400&display=swap');
+
+/*Cabezera*/
+body{
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.navbar{
+    background-color:rgb(72, 98, 214);     
+}
+
+
+.logo{
+    margin: 2rem 3rem;
+    text-align: center;
+    
+}
+
+.navbar-item{
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    height: 8vh;
+}
+/**/
+/*Main*/
+.main-content{
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.crud-container{
+    width: 80%;
+    padding: 2rem 3rem;
+    overflow: auto;
+    box-shadow: 0 0 1rem  rgb(125, 141, 209);
+    border-radius: 0.5rem;
+}
+
+.crud-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem 1rem 2rem;
+    border-bottom: 1px solid;
+}
+
+.crud-container h1{
+    font-weight: bold;
+    font-size: 24px;
+
+}

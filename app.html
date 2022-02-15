@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/main.css" rel="stylesheet">
+    <title>Nubes</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <p class="navbar-item">
+                    <img src="imagenes/logo.png" width="112" height="28">    MULTIPART'S E.I.R.L
+                    <img src="imagenes/uns.png" width="112" height="28">
+                </p>
+            </div>
+        </nav>
+    </header>
+
+    
+    <main class="main-content">
+        <div class="logo">
+            <img src="imagenes/logo.png" width="500" height="480">
+        </div>
+        <div class="crud-container">
+            <div class="crud-header">
+                <h1>Productos - MULTIPART'S</h1>
+                <button class="button is-success" id="abrirModal">Nuevo Producto</button>
+            </div>
+            <table class="table" >
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Producto</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Año</th>
+                        <th>Stock</th>
+                        <th>Precio V.</th>
+                        <th>Precio C.</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody id="productsTable">
+                    
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <div class="modal" id="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Registrar Producto</p>
+                <button class="delete" aria-label="close" id="closeRegisterModal"></button>
+            </header>
+            <section class="modal-card-body">
+                <form id="registerForm">
+                    <div class="field">
+                        <label class="label">Producto</label>
+                        <div class="control">
+                            <input class="input" type="text" name="producto" placeholder="Ingresa el producto">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Marca</label>
+                        <div class="control">
+                            <input class="input" type="text" name="marca" placeholder="Ingresa la Marca">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Modelo</label>
+                        <div class="control">
+                            <input class="input" type="text" name="modelo" placeholder="Ingresa el Modelo">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Año</label>
+                        <div class="control">
+                            <input class="input" type="text" name="año" placeholder="Ingresa el año">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Stock</label>
+                        <div class="control">
+                            <input class="input" type="text" name="stock" placeholder="Ingresa el Stock">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Precio V.</label>
+                        <div class="control">
+                            <input class="input" type="text" name="preciov" placeholder="Ingresa el Precio de Venta">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Precio C.</label>
+                        <div class="control">
+                            <input class="input" type="text" name="precioc" placeholder="Ingresa el Precio de Compra">
+                        </div>
+                    </div>
+  
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success" type="submit">Guardar Producto</button>
+            </form>         
+            </footer>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-update">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Actualizar Producto</p>
+                <button class="delete" aria-label="close" id="closeUpdateModal"></button>
+            </header>
+            <section class="modal-card-body">
+                <form id="updateForm">
+                    <div class="field">
+                        <label class="label">Producto</label>
+                        <div class="control">
+                            <input class="input" type="text" name="producto" placeholder="Ingresa el producto">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Marca</label>
+                        <div class="control">
+                            <input class="input" type="text" name="marca" placeholder="Ingresa la Marca">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Modelo</label>
+                        <div class="control">
+                            <input class="input" type="text" name="modelo" placeholder="Ingresa el Modelo">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Año</label>
+                        <div class="control">
+                            <input class="input" type="text" name="año" placeholder="Ingresa el año">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Stock</label>
+                        <div class="control">
+                            <input class="input" type="text" name="stock" placeholder="Ingresa el Stock">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Precio V.</label>
+                        <div class="control">
+                            <input class="input" type="text" name="preciov" placeholder="Ingresa el Precio de Venta">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Precio C.</label>
+                        <div class="control">
+                            <input class="input" type="text" name="precioc" placeholder="Ingresa el Precio de Compra">
+                        </div>
+                    </div>
+  
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success" type="submit">Actualizar Producto</button>
+            </form>         
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="/js/app.js"></script>
+
+</body>
+
+</html>
